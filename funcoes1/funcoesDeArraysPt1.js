@@ -70,7 +70,7 @@ function EscolherOpcao() {
 function FazerLogin(nome, senha) {
     let indice = nomes.indexOf(nome); //espera como parametro o valor que quero buscar no meu array. RETORNA a posicao desse valor.
 
-    if (indice != -1 && senhas[indice] == senha) {
+    if (indice != -1 && senhas[indice] == senha) { // -1 mostra que aquele elemento não exista no meu array, entao != -1 significa que ele existe.
         return true;
     }
     else {
@@ -85,8 +85,8 @@ function ExcluirCadastro(nome) {
     let indice = nomes.indexOf(nome); 
 
     if (indice != -1) {
-        nomes.splice(indice, 1);
-        senhas.splice(indice, 1);
+        nomes.splice(indice, 1);  // ( , , ) altera o conteúdo de um array removendo, substituindo ou adicionando elementos. Ele recebe três parâmetros:
+        senhas.splice(indice, 1); //o índice inicial, o número de elementos a serem removidos e os elementos a serem adicionados (em branco nesse caso).
         console.log("Usuário excluído.");
     }
     else ("Usuário não encontrado");
