@@ -49,8 +49,8 @@ while (continuar) {
 
 //1 - Crie uma função que solicite dois valores ao usuário, um nome e uma senha e
 //guarde cada um no seu respectivo array.
-function CadastrarUsuario() {
-    nomes.push(prompt("Digite o nome de usuário:"));
+function CadastrarUsuario() { 
+    nomes.push(prompt("Digite o nome de usuário:")); //.push coloca o elemento na ultima posição da array. RETORNA o novo tamanho dessa array. 
     senhas.push(prompt("Digite a senha do usuário:"));
     console.log("Usuário cadastrado com sucesso");
 }
@@ -68,7 +68,7 @@ function EscolherOpcao() {
 //compare a senha no array de senhas. Se as duas comparações forem válidas
 //retorne true se uma delas não for válida retorne false.
 function FazerLogin(nome, senha) {
-    let indice = nomes.indexOf(nome);
+    let indice = nomes.indexOf(nome); //espera como parametro o valor que quero buscar no meu array. RETORNA a posicao desse valor.
 
     if (indice != -1 && senhas[indice] == senha) {
         return true;
@@ -82,7 +82,7 @@ function FazerLogin(nome, senha) {
 //então procure pelo nome no array de nomes e exclua ele e a senha correspondente
 //do outro array.
 function ExcluirCadastro(nome) {
-    let indice = nomes.indexOf(nome);
+    let indice = nomes.indexOf(nome); 
 
     if (indice != -1) {
         nomes.splice(indice, 1);
